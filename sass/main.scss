@@ -8,6 +8,10 @@
     font-family: $font-text;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     display: flex;
     padding: 15px;
@@ -172,19 +176,41 @@
         &__name {
             font-weight: 500;
             font-size: 22px;
+            color: black;
         }
         &__city {
             font-weight: 300;
             padding-top: 10px;
             font-size: 20px;
+            color: black;
         }
     }
     &__icon {
         font-size: 35px;
         margin-right: 15px;
-        :hover {
-                display: none;
+        .heart-full {
+            position: relative;
+            color: white;
+            transition-duration: 0.9s;
+            cursor: pointer;
         }
+        .heart-empty {
+            position: relative;
+            right: -44px;
+            color: black;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .heart-empty:hover {
+                z-index: 0;
+                color: white;
+            }
+        .heart-full:hover {
+                z-index: 1;
+                background: -webkit-linear-gradient(45deg, $colour-secondary, $colour-primary);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
     }
 }
 
