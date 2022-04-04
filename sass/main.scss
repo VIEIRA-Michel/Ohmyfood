@@ -160,7 +160,10 @@ a {
         border-radius: 5px;
         padding: 10px 15px;
         background-color: $colour-tertiary;
-        color: darken($colour-tertiary, 40%)
+        color: darken($colour-tertiary, 40%);
+        &.hidden {
+            visibility: hidden;
+        }
     }
     &__details {
         height: 75px;

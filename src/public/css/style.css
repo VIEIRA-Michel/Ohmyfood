@@ -153,6 +153,9 @@ a {
   background-color: #99E2D0;
   color: #278870;
 }
+.restaurant-card__badge.hidden {
+  visibility: hidden;
+}
 .restaurant-card__details {
   height: 75px;
   width: 95%;
