@@ -249,3 +249,71 @@ a {
         }
     }
 }
+
+/*
+************************************************
+************************************************
+***************** CSS MENU *********************
+************************************************
+************************************************
+*/
+
+.background-wallpaper {
+    margin: auto;
+    img {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+}
+
+.menu {
+    background-color: rgb(245, 245, 245);
+    border-radius: 30px 30px 0px 0px;
+    position: relative;
+    top: -30px;
+    &__head {
+        width: 430px;
+        margin: auto;
+        padding: 30px 20px 30px 20px;
+        font-family: $font-title;
+        font-size: 25px;
+    }
+    &__dishes {
+        width: 430px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        &__category {
+            margin-bottom: 15px;
+            width: 85%;
+            margin: auto auto 25px auto;
+        }
+    }
+}
+
+.dishes__selection {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    width: 80%;
+    margin: auto auto 15px auto;
+    border-radius: 15px;
+    box-shadow: 0px 1px 5px rgb(204, 204, 204);
+    align-items: flex-end;
+    &__details {
+        width: 90%;
+        &__name {
+            font-weight: 500;
+            padding-bottom: 10px;
+        }
+        &__flavor {
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+    &__price {
+        text-align: right;
+    }
+}
