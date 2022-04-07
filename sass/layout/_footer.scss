@@ -1,0 +1,38 @@
+.footer {
+    background-color: rgb(46, 46, 46);
+    color: white;
+
+    &__about-us {
+        width: 430px;
+        margin: auto;
+        font-family: $font-text;
+
+        &__title {
+            font-size: 20px;
+            font-family: $font-title;
+            margin-bottom: 20px;
+            padding-top: 20px;
+
+        }
+
+        &__link {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                i {
+                    font-size: 14px;
+                    width: 30px;
+                }
+
+                text-decoration: none;
+                color: white;
+                padding-bottom: 15px;
+
+                &:nth-child(4) {
+                    padding-bottom: 40px;
+                }
+            }
+        }
+    }
+}
