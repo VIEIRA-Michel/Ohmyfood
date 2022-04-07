@@ -19,6 +19,7 @@ body {
 
 @-webkit-keyframes slide-out-fwd-center {
     0% {
+        visibility: visible;
       -webkit-transform: translateZ(1);
               transform: translateZ(1);
       opacity: 1;
@@ -27,15 +28,18 @@ body {
       -webkit-transform: translateZ(600px);
               transform: translateZ(600px);
       opacity: 0;
+      visibility: hidden;
     }
   }
   @keyframes slide-out-fwd-center {
     0% {
+        visibility: visible;
       -webkit-transform: translateZ(1);
               transform: translateZ(1);
       opacity: 1;
     }
     100% {
+        visibility: hidden;
       -webkit-transform: translateZ(600px);
               transform: translateZ(600px);
       opacity: 0;
@@ -44,20 +48,24 @@ body {
 
   @-webkit-keyframes text-blur-out {
     0% {
+        visibility: visible;
       -webkit-filter: blur(0.01);
               filter: blur(0.01);
     }
     100% {
+        visibility: hidden;
       -webkit-filter: blur(12px) opacity(0%);
               filter: blur(12px) opacity(0%);
     }
   }
   @keyframes text-blur-out {
     0% {
+        visibility: visible;
       -webkit-filter: blur(0.01);
               filter: blur(0.01);
     }
     100% {
+        visibility: hidden;
       -webkit-filter: blur(12px) opacity(0%);
               filter: blur(12px) opacity(0%);
     }
@@ -66,15 +74,20 @@ body {
   
 
 .scale-out-center {
-    z-index: 10;
     color: white;
+    display: block;
     text-align: center;
     padding-top: 200px;
     margin: auto;
     width: 100%;
-    position: absolute;
-    height: 2546px;
-    background-color: $colour-tertiary;
+    height: 100%;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba($color: lightgray, $alpha: 0.9);
 	-webkit-animation: slide-out-fwd-center 0.3s 3s both;
 	        animation: slide-out-fwd-center 0.3s 3s both;
 
