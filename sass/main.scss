@@ -205,7 +205,7 @@ a {
     border-radius: 20px;
     box-shadow: 0px 4px 5px rgb(193, 193, 193);
     transition: transform 0.3s;
-    transform: scale(1);
+
 
     &:hover {
         transform: scale(1.05);
@@ -350,7 +350,7 @@ a {
     }
 
     &__dishes {
-        width: 430px;
+        max-width: 430px;
         margin: 30px auto;
         display: flex;
         flex-direction: column;
@@ -368,7 +368,6 @@ a {
     justify-content: space-between;
     background-color: white;
     width: 80%;
-    max-height: 80px;
     margin: auto auto 15px auto;
     border-radius: 15px;
     box-shadow: 0px 1px 5px rgb(204, 204, 204);
@@ -382,16 +381,12 @@ a {
             animation: spin-check 0.5s both
         }
     }
-
-    &:hover > &__information {
-        width: 280px;
-    }
-
     &__information {
         width: 100%;
         justify-content: space-between;
         transition: all 0.5s;
         position: relative;
+        overflow: hidden;
 
         
         &__name {
@@ -405,6 +400,9 @@ a {
             padding: 10px;
             &__flavor {
                 font-weight: 200;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             &__price {
                 margin-left: 30px;

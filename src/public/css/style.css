@@ -300,7 +300,6 @@ a {
   border-radius: 20px;
   box-shadow: 0px 4px 5px rgb(193, 193, 193);
   transition: transform 0.3s;
-  transform: scale(1);
 }
 .restaurant-card:hover {
   transform: scale(1.05);
@@ -425,7 +424,7 @@ a {
   }
 }
 .menu__dishes {
-  width: 430px;
+  max-width: 430px;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -441,7 +440,6 @@ a {
   justify-content: space-between;
   background-color: white;
   width: 80%;
-  max-height: 80px;
   margin: auto auto 15px auto;
   border-radius: 15px;
   box-shadow: 0px 1px 5px rgb(204, 204, 204);
@@ -454,14 +452,12 @@ a {
 .dishes__selection:hover > .dishes__selection__validate i {
   animation: spin-check 0.5s both;
 }
-.dishes__selection:hover > .dishes__selection__information {
-  width: 280px;
-}
 .dishes__selection__information {
   width: 100%;
   justify-content: space-between;
   transition: all 0.5s;
   position: relative;
+  overflow: hidden;
 }
 .dishes__selection__information__name {
   padding: 10px;
@@ -475,6 +471,9 @@ a {
 }
 .dishes__selection__information__details__flavor {
   font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dishes__selection__information__details__price {
   margin-left: 30px;
