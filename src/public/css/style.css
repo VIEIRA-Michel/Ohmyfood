@@ -299,12 +299,11 @@ a {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 5px rgb(193, 193, 193);
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 .restaurant-card:hover {
   transform: scale(1.05);
-  border: 2px solid #99E2D0;
-  box-shadow: 0px 10px 20px #ade8d9;
+  box-shadow: 0px 0px 20px #a16be0;
 }
 .restaurant-card:nth-child(4) {
   margin-bottom: 70px;
@@ -431,7 +430,7 @@ a {
 }
 .menu__dishes__category {
   margin-bottom: 15px;
-  width: 85%;
+  width: 82%;
   margin: auto auto 25px auto;
 }
 
@@ -439,7 +438,7 @@ a {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  width: 80%;
+  width: 85%;
   margin: auto auto 15px auto;
   border-radius: 15px;
   box-shadow: 0px 1px 5px rgb(204, 204, 204);
@@ -460,8 +459,11 @@ a {
   overflow: hidden;
 }
 .dishes__selection__information__name {
-  padding: 10px;
+  padding: 15px 10px 0px 15px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dishes__selection__information__details {
   display: flex;
@@ -474,6 +476,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding: 0px 0px 5px 5px;
 }
 .dishes__selection__information__details__price {
   margin-left: 30px;
@@ -482,9 +485,9 @@ a {
 .dishes__selection__validate {
   background-color: #99E2D0;
   z-index: 1;
-  width: 65px;
+  width: 105px;
   height: 72px;
-  margin-right: -65px;
+  margin-right: -105px;
   display: grid;
   place-items: center;
   transition: margin 0.5s;
