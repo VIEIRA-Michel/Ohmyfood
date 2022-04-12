@@ -78,6 +78,23 @@
     transform: rotate(0);
   }
 }
+.header {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  justify-content: center;
+  box-shadow: 0px 1px 5px rgb(204, 204, 204);
+  position: relative;
+}
+.header__button {
+  border: none;
+  background-color: white;
+  position: relative;
+  left: -105px;
+  top: 5px;
+  font-size: 25px;
+}
+
 .footer {
   background-color: rgb(46, 46, 46);
   color: white;
@@ -176,23 +193,6 @@ a {
   text-decoration: none;
 }
 
-.header {
-  display: flex;
-  padding: 15px;
-  background-color: white;
-  justify-content: center;
-  box-shadow: 0px 1px 5px rgb(204, 204, 204);
-  position: relative;
-}
-.header__button {
-  border: none;
-  background-color: white;
-  position: relative;
-  left: -105px;
-  top: 5px;
-  font-size: 25px;
-}
-
 .form-localisation {
   background-color: rgb(234, 234, 234);
   text-align: center;
@@ -244,6 +244,13 @@ a {
   margin-bottom: 15px;
   font-size: 17px;
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.home-head__button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0px 0px 55px rgb(158, 153, 153);
 }
 
 .home-functionning__title {
@@ -275,7 +282,7 @@ a {
   border-radius: 30px;
   box-shadow: 0px 4px 5px rgb(193, 193, 193);
   transform: scaleY(1);
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 1220px) {
   .functionning-step {
@@ -289,6 +296,7 @@ a {
 }
 .functionning-step:hover {
   transform: scale(1.1);
+  box-shadow: 0px 0px 55px rgb(158, 153, 153);
 }
 .functionning-step:hover::after {
   opacity: 1;
@@ -421,35 +429,23 @@ a {
 }
 .restaurant-card__icon .heart-full {
   position: relative;
-  color: white;
-  transition-duration: 0.9s;
-  cursor: pointer;
-}
-.restaurant-card__icon .heart-empty {
-  position: relative;
-  right: -44px;
-  color: black;
-  z-index: 1;
-  cursor: pointer;
-}
-.restaurant-card__icon .heart-empty:hover {
-  z-index: 0;
-}
-.restaurant-card__icon .heart-full:hover {
-  z-index: 1;
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.restaurant-card__icon .heart-empty {
+  position: relative;
+  right: -44px;
+}
+.restaurant-card__icon .heart-full:hover {
+  opacity: 1;
 }
 
-/*
-************************************************
-************************************************
-***************** CSS MENU *********************
-************************************************
-************************************************
-*/
+/****************** CSS MENU ****************/
 .body-menu {
   max-width: 1440px;
   min-width: 480px;
@@ -483,6 +479,25 @@ a {
   padding: 30px 20px 30px 30px;
   font-family: "Shrikhand", sans-serif;
   font-size: 35px;
+}
+.menu__head__icon {
+  position: relative;
+  top: -40px;
+  right: -380px;
+}
+.menu__head__icon > .heart-full {
+  background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  right: 42px;
+  opacity: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.menu__head__icon > .heart-full:hover {
+  opacity: 1;
 }
 .menu__dishes {
   max-width: 430px;
@@ -577,6 +592,13 @@ a {
   cursor: pointer;
   margin-top: 30px;
   padding: 15px 50px 15px 50px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.menu__button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0px 0px 55px rgb(158, 153, 153);
 }
 
 /*# sourceMappingURL=style.css.map */
