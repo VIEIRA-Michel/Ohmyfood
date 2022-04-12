@@ -84,8 +84,18 @@
 }
 .footer__about-us {
   width: 430px;
+  height: 210px;
   margin: auto;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .footer__about-us {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 .footer__about-us__title {
   font-size: 20px;
@@ -93,9 +103,24 @@
   margin-bottom: 20px;
   padding-top: 20px;
 }
+@media screen and (min-width: 992px) {
+  .footer__about-us__title {
+    margin-bottom: none;
+    margin-top: none;
+    margin: 10px auto auto auto;
+    padding-top: none;
+  }
+}
 .footer__about-us__link {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .footer__about-us__link {
+    flex-direction: row;
+    margin: none;
+    justify-content: space-around;
+  }
 }
 .footer__about-us__link a {
   text-decoration: none;
@@ -116,6 +141,7 @@
 
 body {
   max-width: 1440px;
+  min-width: 480px;
   margin: auto;
   box-shadow: 0px 0px 35px lightgray;
   position: relative;
@@ -154,14 +180,17 @@ a {
   display: flex;
   padding: 15px;
   background-color: white;
-  justify-content: space-around;
+  justify-content: center;
   box-shadow: 0px 1px 5px rgb(204, 204, 204);
   position: relative;
 }
 .header__button {
   border: none;
   background-color: white;
-  display: none;
+  position: relative;
+  left: -105px;
+  top: 5px;
+  font-size: 25px;
 }
 
 .form-localisation {
@@ -221,11 +250,17 @@ a {
   font-weight: 600;
   font-size: 25px;
   margin: 45px auto 15px auto;
-  width: 430px;
+  display: flex;
+  justify-content: center;
 }
 .home-functionning__steps {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .home-functionning__steps {
+    flex-direction: row;
+  }
 }
 
 .functionning-step {
@@ -241,6 +276,16 @@ a {
   box-shadow: 0px 4px 5px rgb(193, 193, 193);
   transform: scaleY(1);
   transition: transform 0.3s;
+}
+@media screen and (min-width: 1220px) {
+  .functionning-step {
+    width: 27%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1340px) {
+  .functionning-step {
+    width: 23%;
+  }
 }
 .functionning-step:hover {
   transform: scale(1.1);
@@ -283,7 +328,8 @@ a {
   font-weight: 600;
   font-size: 25px;
   margin: 45px auto 15px auto;
-  width: 430px;
+  display: flex;
+  justify-content: center;
   padding-top: 40px;
 }
 .home-restaurants__cards {
@@ -291,22 +337,36 @@ a {
   flex-direction: column;
   width: 430px;
   margin: auto;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  .home-restaurants__cards {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: none;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
 }
 
 .restaurant-card {
-  width: 100%;
   margin-top: 40px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 5px rgb(193, 193, 193);
   transition: all 0.3s;
 }
+@media screen and (min-width: 992px) {
+  .restaurant-card {
+    width: 446px;
+    height: 324px;
+    margin: 20px;
+  }
+}
 .restaurant-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 20px #a16be0;
-}
-.restaurant-card:nth-child(4) {
-  margin-bottom: 70px;
 }
 .restaurant-card__img {
   height: 230px;
@@ -316,12 +376,18 @@ a {
 }
 .restaurant-card__badge {
   position: relative;
-  top: -205px;
+  top: -200px;
   left: 320px;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 2% 3%;
   background-color: #99E2D0;
   color: #278870;
+}
+@media screen and (min-width: 992px) {
+  .restaurant-card__badge {
+    top: -205px;
+    left: 335px;
+  }
 }
 .restaurant-card__badge.hidden {
   visibility: hidden;
@@ -386,6 +452,7 @@ a {
 */
 .body-menu {
   max-width: 1440px;
+  min-width: 480px;
   margin: auto;
   box-shadow: 0px 0px 35px lightgray;
   background-color: rgb(243, 243, 243);
@@ -413,14 +480,9 @@ a {
 .menu__head {
   width: 430px;
   margin: auto;
-  padding: 30px 20px 30px 70px;
+  padding: 30px 20px 30px 30px;
   font-family: "Shrikhand", sans-serif;
-  font-size: 25px;
-}
-@media screen and (max-width: 520px) {
-  .menu__head {
-    padding: 30px 20px 30px 30px;
-  }
+  font-size: 35px;
 }
 .menu__dishes {
   max-width: 430px;
@@ -432,13 +494,15 @@ a {
   margin-bottom: 15px;
   width: 82%;
   margin: auto auto 25px auto;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .dishes__selection {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  width: 85%;
+  width: 100%;
   margin: auto auto 15px auto;
   border-radius: 15px;
   box-shadow: 0px 1px 5px rgb(204, 204, 204);
@@ -460,6 +524,7 @@ a {
 }
 .dishes__selection__information__name {
   padding: 15px 10px 0px 15px;
+  font-size: 20px;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -470,6 +535,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
+  font-size: 18px;
 }
 .dishes__selection__information__details__flavor {
   font-weight: 200;
@@ -486,7 +552,7 @@ a {
   background-color: #99E2D0;
   z-index: 1;
   width: 105px;
-  height: 72px;
+  height: 78px;
   margin-right: -105px;
   display: grid;
   place-items: center;
@@ -497,64 +563,6 @@ a {
   color: white;
 }
 
-/*
-&:hover {
-    &__validate {
-        width: 20%;
-        background-color: red;
-        scale: (2);
-    }
-}
-/*
-&__details {
-    width: 90%;
-    padding: 10px;
-
-    &__name {
-        font-weight: 500;
-        padding-bottom: 10px;
-    }
-
-    &__flavor {
-        font-weight: 300;
-        font-size: 15px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 203px;
-    }
-}
-
-&__price {
-    text-align: right;
-    padding: 10px;
-}
-
-&__validate {
-    background-color: $colour-tertiary;
-    display: flex;
-    align-items: center;
-    padding: inherit;
-    height: 80px;
-    width: 5%;
-    color: white;
-    background-color: white;
-    transition: transform 2s;
-    border-radius: 0px 15px 15px 0px;
-    transform: scaleX(1);
-    position: relative;
-    transition: all 0.6s;
-    right: -1px;
-
-    &:hover {
-        background-color: $colour-tertiary;
-        width: 13%;
-        padding-left: 20px;
-        padding-right: 21px;
-        margin-left: 10px;
-        transform: scaleX(1)
-    }
-}
-*/
 .menu__button {
   display: block;
   color: white;

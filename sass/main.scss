@@ -13,6 +13,7 @@
 
 body {
     max-width: 1440px;
+    min-width: 480px;
     margin: auto;
     box-shadow: 0px 0px 35px lightgray;
     position: relative;
@@ -52,14 +53,17 @@ a {
     display: flex;
     padding: 15px;
     background-color: white;
-    justify-content: space-around;
+    justify-content: center;
     box-shadow: 0px 1px 5px rgb(204, 204, 204);
     position: relative;
 
     &__button {
         border: none;
         background-color: white;
-        display: none;
+        position: relative;
+        left: -105px;
+        top: 5px;
+        font-size: 25px;
     }
 }
 
@@ -118,12 +122,17 @@ a {
         font-weight: 600;
         font-size: 25px;
         margin: 45px auto 15px auto;
-        width: 430px;
+        display: flex;
+        justify-content: center;
     }
 
     &__steps {
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width:992px) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -140,6 +149,16 @@ a {
     box-shadow: 0px 4px 5px rgb(193, 193, 193);
     transform: scaleY(1);
     transition: transform 0.3s;
+
+
+    @media screen and (min-width:1220px) {
+        width: 27%;
+        
+    }
+    @media screen and (min-width:992px) and (max-width: 1340px) {
+        width: 23%;
+        
+    }
 
     &:hover {
         transform: scale(1.1);
@@ -186,7 +205,8 @@ a {
         font-weight: 600;
         font-size: 25px;
         margin: 45px auto 15px auto;
-        width: 430px;
+        display: flex;
+        justify-content: center;
         padding-top: 40px;
     }
 
@@ -195,16 +215,34 @@ a {
         flex-direction: column;
         width: 430px;
         margin: auto;
+        padding-bottom: 40px;
+
+        @media screen and (min-width:992px) {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: none;
+            justify-content: center;
+            padding-bottom: 50px;
+
+        }
     }
+
 }
 
 .restaurant-card {
-    width: 100%;
     margin-top: 40px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 4px 5px rgb(193, 193, 193);
     transition: all 0.3s;
+
+    @media screen and (min-width:992px) {
+        width: 446px;
+        height: 324px;
+        margin: 20px;
+        
+    }
 
 
     &:hover {
@@ -212,9 +250,6 @@ a {
         box-shadow: 0px 0px 20px lighten($colour-primary, 5);
     }
 
-    &:nth-child(4) {
-        margin-bottom: 70px;
-    }
 
     &__img {
         height: 230px;
@@ -225,12 +260,17 @@ a {
 
     &__badge {
         position: relative;
-        top: -205px;
+        top: -200px;
         left: 320px;
         border-radius: 5px;
-        padding: 10px 15px;
+        padding: 2% 3%;
         background-color: $colour-tertiary;
         color: darken($colour-tertiary, 40%);
+
+        @media screen and (min-width:992px) {
+            top: -205px;
+            left: 335px;
+        }
 
         &.hidden {
             visibility: hidden;
@@ -311,6 +351,7 @@ a {
 
 .body-menu {
     max-width: 1440px;
+    min-width: 480px;
     margin: auto;
     box-shadow: 0px 0px 35px lightgray;
     background-color: rgb(243, 243, 243);
@@ -339,13 +380,9 @@ a {
     &__head {
         width: 430px;
         margin: auto;
-        padding: 30px 20px 30px 70px;
+        padding: 30px 20px 30px 30px;
         font-family: $font-title;
-        font-size: 25px;
-
-        @media screen and (max-width: 520px) {
-            padding: 30px 20px 30px 30px;
-        }
+        font-size: 35px;
     }
 
     &__dishes {
@@ -358,6 +395,8 @@ a {
             margin-bottom: 15px;
             width: 82%;
             margin: auto auto 25px auto;
+            font-size: 20px;
+            font-weight: 300;
         }
     }
 }
@@ -366,7 +405,7 @@ a {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    width: 85%;
+    width: 100%;
     margin: auto auto 15px auto;
     border-radius: 15px;
     box-shadow: 0px 1px 5px rgb(204, 204, 204);
@@ -390,6 +429,7 @@ a {
         
         &__name {
             padding: 15px 10px 0px 15px;
+            font-size: 20px;
             font-weight: 500;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -400,6 +440,7 @@ a {
             flex-direction: row;
             justify-content: space-between;
             padding: 10px;
+            font-size: 18px;
             &__flavor {
                 font-weight: 200;
                 overflow: hidden;
@@ -418,7 +459,7 @@ a {
         background-color: $colour-tertiary;
         z-index: 1;
         width: 105px;
-        height: 72px;
+        height: 78px;
         margin-right: -105px;
         display: grid;
         place-items: center;
@@ -432,101 +473,6 @@ a {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    &:hover {
-        &__validate {
-            width: 20%;
-            background-color: red;
-            scale: (2);
-        }
-    }
-    /*
-    &__details {
-        width: 90%;
-        padding: 10px;
-
-        &__name {
-            font-weight: 500;
-            padding-bottom: 10px;
-        }
-
-        &__flavor {
-            font-weight: 300;
-            font-size: 15px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 203px;
-        }
-    }
-
-    &__price {
-        text-align: right;
-        padding: 10px;
-    }
-
-    &__validate {
-        background-color: $colour-tertiary;
-        display: flex;
-        align-items: center;
-        padding: inherit;
-        height: 80px;
-        width: 5%;
-        color: white;
-        background-color: white;
-        transition: transform 2s;
-        border-radius: 0px 15px 15px 0px;
-        transform: scaleX(1);
-        position: relative;
-        transition: all 0.6s;
-        right: -1px;
-
-        &:hover {
-            background-color: $colour-tertiary;
-            width: 13%;
-            padding-left: 20px;
-            padding-right: 21px;
-            margin-left: 10px;
-            transform: scaleX(1)
-        }
-    }
-    */
 .menu__button {
     @include button;
     margin-top: 30px;
