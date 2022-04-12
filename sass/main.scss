@@ -316,6 +316,7 @@ a {
         .heart-empty {
             position: relative;
             right: -44px;
+            color: black;
         }
 
         .heart-full:hover {
@@ -365,6 +366,9 @@ a {
             position: relative;
             top: -40px;
             right: -380px;
+            &>.heart-empty {
+                color: black;
+            }
 
             &>.heart-full {
                 background: -webkit-linear-gradient(45deg, $colour-secondary, $colour-primary);

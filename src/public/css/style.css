@@ -440,6 +440,7 @@ a {
 .restaurant-card__icon .heart-empty {
   position: relative;
   right: -44px;
+  color: black;
 }
 .restaurant-card__icon .heart-full:hover {
   opacity: 1;
@@ -484,6 +485,9 @@ a {
   position: relative;
   top: -40px;
   right: -380px;
+}
+.menu__head__icon > .heart-empty {
+  color: black;
 }
 .menu__head__icon > .heart-full {
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
