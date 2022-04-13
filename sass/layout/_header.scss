@@ -14,5 +14,9 @@
         left: 20px;
         top: 20px;
         font-size: 25px;
+
+        @media screen and (max-width: 300px) {
+            left: 10px;
+        }
     }
 }
