@@ -101,7 +101,7 @@
   color: white;
 }
 .footer__about-us {
-  width: 430px;
+  /*width: 430px;*/
   height: 210px;
   margin: auto;
   font-family: "Roboto", sans-serif;
@@ -159,7 +159,6 @@
 
 body {
   max-width: 1440px;
-  min-width: 480px;
   margin: auto;
   box-shadow: 0px 0px 35px lightgray;
   position: relative;
@@ -214,6 +213,8 @@ a {
 .home-head {
   background-color: rgb(246, 246, 246);
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .home-head__message {
   display: flex;
@@ -233,8 +234,7 @@ a {
   font-size: 17px;
   padding: 15px;
 }
-.home-head__button {
-  display: block;
+.home-head a {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
@@ -248,10 +248,9 @@ a {
   opacity: 1;
   transition: all 0.3s;
 }
-.home-head__button:hover {
-  transform: scale(1.1);
+.home-head a:hover {
   opacity: 0.8;
-  box-shadow: 0px 0px 55px rgb(158, 153, 153);
+  box-shadow: 0px 6px 19px rgb(193, 193, 193);
 }
 
 .home-functionning__title {
@@ -281,9 +280,7 @@ a {
   padding: 15px;
   background-color: rgb(244, 244, 244);
   border-radius: 30px;
-  box-shadow: 0px 4px 5px rgb(193, 193, 193);
-  transform: scaleY(1);
-  transition: all 0.3s;
+  box-shadow: 0px 6px 19px rgb(193, 193, 193);
 }
 @media screen and (min-width: 1220px) {
   .functionning-step {
@@ -294,26 +291,6 @@ a {
   .functionning-step {
     width: 23%;
   }
-}
-.functionning-step:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 55px rgb(158, 153, 153);
-}
-.functionning-step:hover::after {
-  opacity: 1;
-}
-.functionning-step::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  opacity: 0;
-  z-index: -1;
-  border-radius: 30px;
-  transition: opacity 250ms;
 }
 .functionning-step__number {
   position: relative;
@@ -450,7 +427,6 @@ a {
 /****************** CSS MENU ****************/
 .body-menu {
   max-width: 1440px;
-  min-width: 480px;
   margin: auto;
   box-shadow: 0px 0px 35px lightgray;
   background-color: rgb(243, 243, 243);
@@ -474,18 +450,17 @@ a {
   border-radius: 30px 30px 0px 0px;
   position: relative;
   top: -30px;
+  padding: 0 20px;
 }
 .menu__head {
-  width: 430px;
+  /*width: 430px;*/
   margin: auto;
-  padding: 30px 20px 30px 30px;
+  padding-top: 1rem;
+  margin-bottom: 40px;
   font-family: "Shrikhand", sans-serif;
-  font-size: 35px;
-}
-.menu__head__icon {
-  position: relative;
-  top: -40px;
-  right: -380px;
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: space-between;
 }
 .menu__head__icon > .heart-empty {
   color: black;
@@ -495,20 +470,58 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  position: relative;
-  right: 42px;
+  position: absolute;
+  right: 20px;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.8s;
   cursor: pointer;
 }
 .menu__head__icon > .heart-full:hover {
   opacity: 1;
 }
-.menu__dishes {
-  max-width: 430px;
-  margin: 30px auto;
+.menu__body {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .menu__body {
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    margin-top: 3em;
+    flex-wrap: wrap;
+  }
+}
+.menu__body a {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  padding: 15px 25px 15px 25px;
+  border: none;
+  box-shadow: 0px 4px 5px rgb(193, 193, 193);
+  margin: 0 auto 0 auto;
+  margin-bottom: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 15px 50px 15px 50px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.menu__body a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0px 0px 55px rgb(158, 153, 153);
+}
+.menu__dishes {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .menu__dishes {
+    width: 30%;
+    max-width: none;
+  }
 }
 .menu__dishes__category {
   margin-bottom: 15px;
@@ -581,29 +594,6 @@ a {
 .dishes__selection__validate i {
   font-size: 30px;
   color: white;
-}
-
-.menu__button {
-  display: block;
-  color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 30px;
-  padding: 15px 25px 15px 25px;
-  border: none;
-  box-shadow: 0px 4px 5px rgb(193, 193, 193);
-  margin: 0 auto 0 auto;
-  margin-bottom: 15px;
-  font-size: 17px;
-  cursor: pointer;
-  margin-top: 30px;
-  padding: 15px 50px 15px 50px;
-  opacity: 1;
-  transition: all 0.3s;
-}
-.menu__button:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-  box-shadow: 0px 0px 55px rgb(158, 153, 153);
 }
 
 /*# sourceMappingURL=style.css.map */

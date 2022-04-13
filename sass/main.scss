@@ -13,7 +13,6 @@
 
 body {
     max-width: 1440px;
-    min-width: 480px;
     margin: auto;
     box-shadow: 0px 0px 35px lightgray;
     position: relative;
@@ -72,6 +71,8 @@ a {
 .home-head {
     background-color: rgb(246, 246, 246);
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 
     &__message {
         display: flex;
@@ -94,15 +95,14 @@ a {
         }
     }
 
-    &__button {
+    a {
         @include button;
         opacity: 1;
         transition: all 0.3s;
 
         &:hover {
-            transform: scale(1.1);
             opacity: 0.8;
-            box-shadow: 0px 0px 55px rgb(158 153 153);
+            box-shadow: $box-shadow;
         }
     }
 }
@@ -136,9 +136,7 @@ a {
     padding: 15px;
     background-color: $light-gray;
     border-radius: 30px;
-    box-shadow: 0px 4px 5px rgb(193, 193, 193);
-    transform: scaleY(1);
-    transition: all 0.3s;
+    box-shadow: 0px 6px 19px rgb(193, 193, 193);
 
 
     @media screen and (min-width:1220px) {
@@ -149,29 +147,6 @@ a {
     @media screen and (min-width:992px) and (max-width: 1340px) {
         width: 23%;
 
-    }
-
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 0px 55px rgb(158 153 153);
-
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: lighten($light-gray, 5);
-        opacity: 0;
-        z-index: -1;
-        border-radius: 30px;
-        transition: opacity 250ms;
     }
 
     &__number {
@@ -329,7 +304,6 @@ a {
 
 .body-menu {
     max-width: 1440px;
-    min-width: 480px;
     margin: auto;
     box-shadow: 0px 0px 35px lightgray;
     background-color: rgb(243, 243, 243);
@@ -354,18 +328,19 @@ a {
     border-radius: 30px 30px 0px 0px;
     position: relative;
     top: -30px;
+    padding: 0 20px;
 
     &__head {
-        width: 430px;
+        /*width: 430px;*/
         margin: auto;
-        padding: 30px 20px 30px 30px;
+        padding-top: 1rem;
+        margin-bottom: 40px;
         font-family: $font-title;
-        font-size: 35px;
+        font-size: 1.9rem;
+        display: flex;
+        justify-content: space-between;
 
         &__icon {
-            position: relative;
-            top: -40px;
-            right: -380px;
             &>.heart-empty {
                 color: black;
             }
@@ -375,10 +350,10 @@ a {
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
-                position: relative;
-                right: 42px;
+                position: absolute;
+                right: 20px;
                 opacity: 0;
-                transition: all 0.3s;
+                transition: all 0.8s;
                 cursor: pointer;
 
                 &:hover {
@@ -389,11 +364,41 @@ a {
         }
     }
 
-    &__dishes {
-        max-width: 430px;
-        margin: 30px auto;
+    &__body {
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+            margin: auto;
+            justify-content: space-around;
+            margin-top: 3em;
+            flex-wrap: wrap;
+        }
+
+        a {
+            @include button;
+            margin-top: 30px;
+            padding: 15px 50px 15px 50px;
+            opacity: 1;
+            transition: all 0.3s;
+        
+            &:hover {
+                transform: scale(1.1);
+                opacity: 0.8;
+                box-shadow: 0px 0px 55px rgb(158 153 153);
+            }
+        }
+    }
+
+    &__dishes {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 992px) {
+            width: 30%;
+            max-width: none;
+        }
 
         &__category {
             margin-bottom: 15px;
@@ -479,18 +484,4 @@ a {
         }
     }
 
-}
-
-.menu__button {
-    @include button;
-    margin-top: 30px;
-    padding: 15px 50px 15px 50px;
-    opacity: 1;
-    transition: all 0.3s;
-
-    &:hover {
-        transform: scale(1.1);
-        opacity: 0.8;
-        box-shadow: 0px 0px 55px rgb(158 153 153);
-    }
 }
