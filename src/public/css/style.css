@@ -490,6 +490,7 @@ a {
     justify-content: space-around;
     margin-top: 3em;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 .menu__body a {
