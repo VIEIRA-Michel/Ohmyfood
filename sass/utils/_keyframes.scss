@@ -1,8 +1,8 @@
 @-webkit-keyframes slide-out-fwd-center {
     0% {
         visibility: visible;
-      -webkit-transform: translateZ(1);
-              transform: translateZ(1);
+      -webkit-transform: translateZ(1px);
+              transform: translateZ(1px);
       opacity: 1;
     }
     100% {
@@ -15,8 +15,8 @@
   @keyframes slide-out-fwd-center {
     0% {
         visibility: visible;
-      -webkit-transform: translateZ(1);
-              transform: translateZ(1);
+      -webkit-transform: translateZ(1px);
+              transform: translateZ(1px);
       opacity: 1;
     }
     100% {
@@ -30,8 +30,8 @@
   @-webkit-keyframes text-blur-out {
     0% {
         visibility: visible;
-      -webkit-filter: blur(0.01);
-              filter: blur(0.01);
+      -webkit-filter: blur(0.01px);
+              filter: blur(0.01px);
     }
     100% {
         visibility: hidden;
@@ -42,8 +42,8 @@
   @keyframes text-blur-out {
     0% {
         visibility: visible;
-      -webkit-filter: blur(0.01);
-              filter: blur(0.01);
+      -webkit-filter: blur(0.01px);
+              filter: blur(0.01px);
     }
     100% {
         visibility: hidden;

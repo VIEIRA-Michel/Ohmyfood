@@ -6,7 +6,7 @@
 }
 
 .main-menu {
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(245, 245, 245);
 
     @media screen and (min-width:992px) {
         padding-bottom: 40px;
@@ -20,6 +20,10 @@
         object-fit: cover;
         height: 200px;
         width: 100%;
+
+        @media screen and (min-width: 769px) {
+            height: 465px;
+        }
     }
 }
 
@@ -30,6 +34,10 @@
     top: -30px;
     padding: 0 20px;
 
+    @media screen and (min-width: 769px) {
+        top: -140px;
+        
+    }
     &__head {
         margin: auto;
         padding-top: 1rem;
@@ -39,6 +47,10 @@
         display: flex;
         justify-content: center;
         align-items: end;
+
+        @media screen and (min-width: 769px) {
+            padding-top: 40px;    
+        }
 
         &__icon {
             position: relative;
@@ -91,9 +103,14 @@
         a {
             @include button;
             margin-top: 30px;
+            margin-bottom: 50px;
             padding: 15px 50px 15px 50px;
             opacity: 1;
             transition: all 0.3s;
+
+            @media screen and (min-width: 769px) {
+                margin-top: 70px;                
+            }
 
             &:hover {
                 opacity: 0.8;
