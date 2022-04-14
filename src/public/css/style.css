@@ -317,6 +317,9 @@ a {
   border-radius: 30px;
   box-shadow: 0px 6px 19px rgb(193, 193, 193);
 }
+.functionning-step:nth-child(3) {
+  background-color: rgb(243, 234, 254);
+}
 @media screen and (max-width: 490px) {
   .functionning-step {
     width: 70%;
