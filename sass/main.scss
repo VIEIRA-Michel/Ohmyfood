@@ -31,8 +31,8 @@ body {
     position: fixed;
     z-index: 10;
     background-color: rgba($color: lightgray, $alpha: 0.9);
-    -webkit-animation: slide-out-fwd-center 0.3s 3s both;
-    animation: slide-out-fwd-center 0.3s 3s both;
+    -webkit-animation: slide-out-fwd-center 0.3s 2s both;
+    animation: slide-out-fwd-center 0.3s 2s both;
 
     p {
         font-family: $font-title;

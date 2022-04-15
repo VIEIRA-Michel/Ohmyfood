@@ -232,11 +232,12 @@
     }
 
 }
-
 @for $i from 1 through 10 {
+    $iteration-amount: 200ms * $i;
     .dish-#{$i} {
-        animation: fade-in-bottom 1s;
+        animation: fade-in-bottom 3s;
         animation-fill-mode: forwards;
-        animation-delay: 200ms * $i;
+        animation-delay: 1800ms + $iteration-amount;
     }
 }
+

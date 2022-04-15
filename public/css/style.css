@@ -412,63 +412,63 @@
 }
 
 .dish-1 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 200ms;
+  animation-delay: 2000ms;
 }
 
 .dish-2 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 400ms;
+  animation-delay: 2200ms;
 }
 
 .dish-3 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 600ms;
+  animation-delay: 2400ms;
 }
 
 .dish-4 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 800ms;
+  animation-delay: 2600ms;
 }
 
 .dish-5 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 1000ms;
+  animation-delay: 2800ms;
 }
 
 .dish-6 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 1200ms;
+  animation-delay: 3000ms;
 }
 
 .dish-7 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 1400ms;
+  animation-delay: 3200ms;
 }
 
 .dish-8 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 1600ms;
+  animation-delay: 3400ms;
 }
 
 .dish-9 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 1800ms;
+  animation-delay: 3600ms;
 }
 
 .dish-10 {
-  animation: fade-in-bottom 1s;
+  animation: fade-in-bottom 3s;
   animation-fill-mode: forwards;
-  animation-delay: 2000ms;
+  animation-delay: 3800ms;
 }
 
 * {
@@ -497,8 +497,8 @@ body {
   position: fixed;
   z-index: 10;
   background-color: rgba(211, 211, 211, 0.9);
-  -webkit-animation: slide-out-fwd-center 0.3s 3s both;
-  animation: slide-out-fwd-center 0.3s 3s both;
+  -webkit-animation: slide-out-fwd-center 0.3s 2s both;
+  animation: slide-out-fwd-center 0.3s 2s both;
 }
 .scale-out-center p {
   font-family: "Shrikhand", sans-serif;
