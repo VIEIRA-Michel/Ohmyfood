@@ -195,11 +195,11 @@
 
 .main-menu {
   background-color: rgb(245, 245, 245);
-}
-@media screen and (min-width: 992px) {
-  .main-menu {
-    padding-bottom: 40px;
+  /*
+  @media screen and (min-width:992px) {
+      padding-bottom: 40px;
   }
+  */
 }
 
 .background-wallpaper {
@@ -298,7 +298,6 @@
   font-size: 17px;
   cursor: pointer;
   margin-top: 30px;
-  margin-bottom: 50px;
   padding: 15px 50px 15px 50px;
   opacity: 1;
   transition: all 0.3s;
@@ -358,26 +357,6 @@
   overflow: hidden;
   opacity: 0;
 }
-.dishes__selection:nth-child(1) {
-  animation: fade-in-bottom 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 200ms;
-}
-.dishes__selection:nth-child(2) {
-  animation: fade-in-bottom 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 400ms;
-}
-.dishes__selection:nth-child(3) {
-  animation: fade-in-bottom 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 600ms;
-}
-.dishes__selection:nth-child(4) {
-  animation: fade-in-bottom 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 800ms;
-}
 .dishes__selection:hover > .dishes__selection__validate {
   margin-right: 0;
 }
@@ -430,6 +409,66 @@
 .dishes__selection__validate i {
   font-size: 30px;
   color: white;
+}
+
+.dish-1 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 200ms;
+}
+
+.dish-2 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 400ms;
+}
+
+.dish-3 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 600ms;
+}
+
+.dish-4 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 800ms;
+}
+
+.dish-5 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1000ms;
+}
+
+.dish-6 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1200ms;
+}
+
+.dish-7 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1400ms;
+}
+
+.dish-8 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1600ms;
+}
+
+.dish-9 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1800ms;
+}
+
+.dish-10 {
+  animation: fade-in-bottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2000ms;
 }
 
 * {
